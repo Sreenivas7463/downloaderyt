@@ -14,10 +14,10 @@ if url != '':
         if yt.streams.filter(only_audio=True):
             download_audio = st.button("Download Audio Only")
         if download_video:
-            video.get_highest_resolution().download()
+            video.get_highest_resolution().download('C://')
             downloaded = True
         if download_audio:
-            video.filter(only_audio=True).first().download()
+            video.filter(only_audio=True).first().download('C://')
             downloaded = True
         if downloaded:
             st.subheader("Download Complete")
